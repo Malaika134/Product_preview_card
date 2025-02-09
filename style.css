@@ -1,0 +1,140 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    ::selection {
+        background-color: hsla(212, 21%, 14%, 0.199);
+    }
+}
+
+html,body {
+    height: 100%;
+    width: 100%;
+}
+
+.main_container {
+    min-height: 100vh;
+    width: 100%;
+    background-color: hsl(30, 38%, 92%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_one {
+    height: 26rem;
+    width: 18rem;
+    background-image: url('one.jpg');
+    background-size: cover;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+.container_two {
+    height: 26rem;
+    width: 18rem;
+    background-color: white;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    padding: 1.5rem;
+}
+
+.container_two h1::before {
+    content: "PERFUME";
+    font-size: 0.7rem;
+    color: hsl(228, 12%, 48%);
+    letter-spacing: 0.3rem;
+    position: absolute;
+    top: 18%;
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+    padding-top: 0.8rem;
+}
+
+h1 {
+    color: hsl(212, 21%, 14%);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-family: "Fraunces", serif;
+    font-weight: 900;
+}
+
+p {
+    color: hsl(228, 12%, 48%);
+    margin-bottom: 1rem;
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+
+h2 {
+    color: hsl(158, 36%, 37%);
+    margin-bottom: 1.2rem;
+    font-family: "Fraunces", serif;
+    word-spacing: 0.5rem;
+}
+
+span {
+    text-decoration: line-through;
+    color: hsl(228, 12%, 48%);
+    font-size: 0.7rem;
+    font-family: "Montserrat", serif;
+}
+
+button {
+    width: 15rem;
+    height: 2.4rem;
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    border-style: none;
+    font-size: 0.7rem;
+    border-radius: 0.5rem;
+}
+
+button:hover {
+    background-color: hsl(159, 42%, 19%);
+    transition-duration: 1s;
+}
+
+@media (max-width:1300px){
+    .container_two h1::before {
+        top: 22%;
+    }
+}
+
+@media(max-width:640px) {
+
+    .main_container {
+        flex-direction: column;
+    }
+
+    .container_one {
+        height: 15rem;
+        width: 22rem;
+        background-image: url('two.jpg');
+        border-top-right-radius: 0.5rem;
+        border-bottom-left-radius: 0;
+
+    }
+
+    .container_two {
+        height: 24rem;
+        width: 22rem;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.5rem;
+
+    }
+
+    button {
+        width: 19rem;
+        height: 3rem;
+        font-size: 0.9rem;
+    }
+
+    .container_two h1::before {
+        top: 40%;
+    }
+
+}
+
